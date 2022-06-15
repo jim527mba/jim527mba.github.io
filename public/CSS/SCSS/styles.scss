@@ -27,7 +27,7 @@ header>.container>h1 {
     margin: auto;
     width: 100%;
     max-width: 1140px;
-    background-color: #02111b;
+    background-color: #5d737e;
 }
 
 .container>h2 {
@@ -48,12 +48,10 @@ header>.container>nav>ul {
 }
 
 header>.container>nav>ul>li {
-    // margin-right: 30;
-    // border: 0.5px solid white;
     width: 25%;
     height: 100%;
     text-align: center;
-    background-color: black;
+    background-color:#5d737e;
 }
 
 header>.container>nav>ul>li:hover {
@@ -62,12 +60,13 @@ header>.container>nav>ul>li:hover {
     // width: 25%;
     // height: 100%;
     // text-align: center;
-    background-color: #5d737e;
+    background-color: #30292f;;
 }
 
 header>.container>nav>ul>li>a {
     line-height: 30px;
     color: white;
+    font-weight: 700;
     letter-spacing: 2px;
     display: block;
 }
