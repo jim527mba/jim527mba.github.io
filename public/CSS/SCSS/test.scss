@@ -1,4 +1,25 @@
+$primary-color:#04D9C4;
+
 body{
-    background-color:grey;
-    color: red;
+  font-family: Impact, "微軟正黑體";
+  color: red;
+  font-weight: 700;
+}
+
+.btn-primary{
+  background-color:$primary-color;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.btn-primary:hover{
+  background-color:#011140;
+  // color: white;
+  // padding: 8px;
+  // border-radius: 4px;
+  // text-decoration: none;
+  // letter-spacing: 2px;
 }

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #3f4045;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #ffffd5;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+  max-width: 1140px;
+  background-color: #02111b;
+}
+
+header > .container > h1 {
+  color: white;
+  margin-left: 15px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+header > .container > nav > ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header > .container > nav > ul > li {
+  width: 25%;
+  text-align: center;
+}
+
+header > .container > nav > ul > li > a {
+  line-height: 60px;
+  color: white;
+  letter-spacing: 2px;
+  display: block;
+}
