@@ -73,19 +73,19 @@ header>.container>nav>ul>li>a {
 }
 
 // ---------------------------內容---------------------------
-.img-fluid {
-    width: 100%;
-}
+// .img-fluid {
+//     width: 100%;
+// }
 
 .img-rounded {
-    width: 250px;
-    border-radius: 8px;
-    margin: 10px;
+    width: 80%;
+    border-radius: 5px;
+    // margin: 10px;
 }
 
-.img-circle {
-    border-radius: 100%;
-}
+// .img-circle {
+//     border-radius: 100%;
+// }
 
 .row {
     display: flex;
@@ -93,8 +93,9 @@ header>.container>nav>ul>li>a {
 }
 
 .col-4 {
-    width: calc(100%/3-30px);
-    margin: 0 15 40 15;
+    // width: calc(100%/3-30px);
+width: 33%;
+    // margin: 10px;
 }
 
 .container h1,
@@ -104,4 +105,34 @@ p {
 
 .text-center {
     text-align: center;
+}
+
+.copyright {
+    color: $primary-color;
+}
+
+dt {
+    font-size: 1.2em;
+    color: bisque;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+
+dd {
+    margin-bottom: 5px;
+}
+
+dd>a {
+    color: white;
+}
+
+.copyright {
+    // margin: 50px;
+    padding: 50px;
+    color: red;
+    font-style: italic;
+}
+
+body h3{
+    color: yellow   ;
 }
