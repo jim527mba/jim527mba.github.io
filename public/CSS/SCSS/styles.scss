@@ -4,42 +4,49 @@ $primary-color:white;
     margin: 0;
     padding: 0;
 }
+
 a,
 p {
     text-decoration: none;
     color: $primary-color;
 }
+
 body {
     padding: 0;
     margin: 0
-
 }
-header>.container>h1{
-        color: white;
-        margin-left: 15px;
-        height: 60px;
-        line-height: 60px;
-    }
+
+header>.container>h1 {
+    color: white;
+    margin-left: 15px;
+    height: 60px;
+    line-height: 60px;
+}
+
 .container {
     margin: auto;
     width: 80%;
     max-width: 1140px;
     background-color: #02111b;
 }
-.container>h2{
+
+.container>h2 {
     color: $primary-color;
     text-align: center;
 }
+
 ul,
 ol {
     list-style: none;
 }
+
 header>.container>nav>ul {
     display: flex;
     justify-content: space-around;
     padding: 0px;
     height: 30px;
 }
+
 header>.container>nav>ul>li {
     // margin-right: 30;
     // border: 0.5px solid white;
@@ -48,6 +55,7 @@ header>.container>nav>ul>li {
     text-align: center;
     background-color: black;
 }
+
 header>.container>nav>ul>li:hover {
     // margin-right: 30;
     // border: 0.5px solid white;
@@ -56,15 +64,27 @@ header>.container>nav>ul>li:hover {
     // text-align: center;
     background-color: #5d737e;
 }
+
 header>.container>nav>ul>li>a {
     line-height: 30px;
     color: white;
     letter-spacing: 2px;
     display: block;
 }
+
 // ---------------------------內容---------------------------
 .img-fluid {
     width: 100%;
+}
+
+.img-rounded{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.img-circle{
+    border-radius: 100%;
 }
 
 .row {
@@ -73,12 +93,16 @@ header>.container>nav>ul>li>a {
 }
 
 .col-4 {
-    width: calc(100%/3);
-    margin: 0px 0px 0px 0px;
-
+    width: calc(100%/3.2);
+    margin: 5px 0 20px 10px
 }
 
 .container h1,
 p {
     text-align: center;
 }
+
+.text-center{
+    text-align: center;
+}
+
