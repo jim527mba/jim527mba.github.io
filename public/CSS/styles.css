@@ -72,3 +72,7 @@ header > .container > nav > ul > li > a {
 .col-4 {
   width: 33.3%;
 }
+
+.container h1, p {
+  text-align: center;
+}

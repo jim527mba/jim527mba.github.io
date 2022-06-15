@@ -72,8 +72,7 @@ header>.container>nav>ul>li>a {
     letter-spacing: 2px;
     // border: 0.5px solid white;
     // box-sizing: border-box;
-    display: block;
-}
+    display: block;}
 // ---------------------------內容---------------------------
 .img-fluid{
     width: 100%;
@@ -85,8 +84,6 @@ header>.container>nav>ul>li>a {
 .col-4{
     width: 33.3%;
 }
-// ---------------------------內容---------------------------
-// ---------------------------內容---------------------------
-
-
-
+.container h1,p{
+    text-align: center;
+}
