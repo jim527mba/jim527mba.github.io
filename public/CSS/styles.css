@@ -59,3 +59,7 @@ header > .container > nav > ul > li > a {
   letter-spacing: 2px;
   display: block;
 }
+
+.img-fluid {
+  width: 100%;
+}
