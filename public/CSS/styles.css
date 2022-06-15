@@ -3,9 +3,9 @@
   padding: 0;
 }
 
-a {
+a, h1, p {
   text-decoration: none;
-  color: #3f4045;
+  color: white;
 }
 
 body {
@@ -27,6 +27,7 @@ header {
 header > .container > h1 {
   color: white;
   margin-left: 15px;
+  height: 60px;
 }
 
 ul,
@@ -37,15 +38,23 @@ ol {
 header > .container > nav > ul {
   display: flex;
   justify-content: space-around;
+  padding: 0px;
+  height: 30px;
 }
 
 header > .container > nav > ul > li {
   width: 25%;
+  height: 100%;
   text-align: center;
+  background-color: black;
+}
+
+header > .container > nav > ul > li:hover {
+  background-color: #5d737e;
 }
 
 header > .container > nav > ul > li > a {
-  line-height: 60px;
+  line-height: 30px;
   color: white;
   letter-spacing: 2px;
   display: block;
