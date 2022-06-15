@@ -4,57 +4,49 @@ $primary-color:white;
     margin: 0;
     padding: 0;
 }
-
-a,h1,p {
+a,
+p {
     text-decoration: none;
     color: $primary-color;
 }
-
 body {
     padding: 0;
     margin: 0
-}
-// ---------------------------header---------------------------
-// ---------------------------header---------------------------
-// ---------------------------header---------------------------
-header {
-    background-color: rgb(255, 255, 213);
-}
 
+}
+header>.container>h1{
+        color: white;
+        margin-left: 15px;
+        height: 60px;
+        line-height: 60px;
+    }
 .container {
     margin: auto;
     width: 80%;
     max-width: 1140px;
     background-color: #02111b;
 }
-
-header>.container>h1 {
-    color: white;
-    margin-left: 15px;
-    // margin-top:15px;
-    height: 60px;
+.container>h2{
+    color: $primary-color;
+    text-align: center;
 }
-
 ul,
 ol {
     list-style: none;
 }
-
 header>.container>nav>ul {
     display: flex;
     justify-content: space-around;
     padding: 0px;
     height: 30px;
-
 }
-
 header>.container>nav>ul>li {
     // margin-right: 30;
     // border: 0.5px solid white;
     width: 25%;
     height: 100%;
     text-align: center;
-    background-color:black;
+    background-color: black;
 }
 header>.container>nav>ul>li:hover {
     // margin-right: 30;
@@ -62,28 +54,31 @@ header>.container>nav>ul>li:hover {
     // width: 25%;
     // height: 100%;
     // text-align: center;
-    background-color:#5d737e;
+    background-color: #5d737e;
 }
-
 header>.container>nav>ul>li>a {
     line-height: 30px;
     color: white;
-    // font-size: 1em;
     letter-spacing: 2px;
-    // border: 0.5px solid white;
-    // box-sizing: border-box;
-    display: block;}
+    display: block;
+}
 // ---------------------------內容---------------------------
-.img-fluid{
+.img-fluid {
     width: 100%;
 }
-.row{
+
+.row {
     display: flex;
     flex-wrap: wrap;
 }
-.col-4{
-    width: 33.3%;
+
+.col-4 {
+    width: calc(100%/3);
+    margin: 0px 0px 0px 0px;
+
 }
-.container h1,p{
+
+.container h1,
+p {
     text-align: center;
 }
