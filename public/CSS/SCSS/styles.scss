@@ -168,3 +168,49 @@ dd>a {
     padding-bottom: 30px;
 }
 
+// ==============================
+// ex_list
+// ==============================
+
+// .container-ex {}
+
+section h4{
+    margin: 20px;
+}
+
+section h4 a{
+    color: #30292f;
+    height: 30px;
+    margin: 10px;
+}
+
+.left {
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+section ul{
+    width: 20%;
+    text-align: center;
+}
+
+section li {
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px;
+    background-color: #30292f;
+    border-radius: 8px;
+}
+
+section a {
+    color: white;
+}
+
+// .right {
+//     color: #30292f;
+//     display: block;
+//     width: 70%;
+//     float: left;
+// }
