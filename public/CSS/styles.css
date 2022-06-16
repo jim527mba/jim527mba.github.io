@@ -129,7 +129,11 @@ a {
 
 .style_footer {
   background-color: #5d737e;
-  margin-top: 30px;
+  margin: 0 0 0 0;
+}
+
+.style_footer dt {
+  margin-left: 15px;
 }
 
 dt {
@@ -186,4 +190,41 @@ dd > a {
 
 .row a {
   color: white;
+}
+
+.btn-primary {
+  background-color: #30292f;
+  color: white;
+}
+
+.text-primary {
+  color: white;
+}
+
+.img-wrap {
+  display: block;
+  background-color: yellowgreen;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.img-wrap img {
+  vertical-align: top;
+  transition: all 1s;
+}
+
+.img-wrap img:hover {
+  transform: scale(1.2);
+}
+
+.icon-new {
+  position: absolute;
+  left: -25px;
+  bottom: -25px;
+  width: 50px;
+  border-radius: 100%;
+  margin: left -25px;
+  color: white;
+  background-color: green;
+  line-height: 50px;
 }

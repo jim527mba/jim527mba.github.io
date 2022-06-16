@@ -160,8 +160,11 @@ a {
 
 .style_footer {
     background-color: #5d737e;
-    margin-top: 30px;
-    // max-width: 1140px;
+    margin: 0 0 0 0;
+}
+
+.style_footer dt {
+    margin-left: 15px;
 }
 
 dt {
@@ -181,8 +184,6 @@ dd>a {
 
 .copyright {
     margin-top: 50px;
-    // margin: 50px auto o auto;
-    // padding: 50px;
     color: yellow;
     font-style: italic;
     text-align: center;
@@ -216,7 +217,7 @@ dd>a {
     background-color: #30292f;
     border: 1px solid white;
     border-radius: 8px;
-    // font-size: 20px;
+
     width: 70%;
     height: 40px;
     line-height: 40px;
@@ -226,3 +227,53 @@ dd>a {
 .row a {
     color: white;
 }
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+.btn-primary {
+    background-color: #30292f;
+    color: white;
+}
+
+.text-primary {
+    color: white;
+}
+
+
+// .img-overlay{
+//     overflow: hidden;
+// }
+.img-wrap {
+    display: block;
+    background-color: yellowgreen;
+    position: relative;
+    margin-bottom: 10px;
+    // overflow: hidden;
+}
+
+
+
+.img-wrap img {
+    vertical-align: top;
+    transition: all 1s;
+}
+
+.img-wrap img:hover {
+    transform: scale(1.2);
+
+}
+
+.icon-new {
+    position: absolute;
+    left: -25px;
+    bottom: -25px;
+    width: 50px;
+    border-radius: 100%;
+    margin: left -25px;
+    color: white;
+    background-color: green;
+    line-height: 50px;
+    ;
+}
+
