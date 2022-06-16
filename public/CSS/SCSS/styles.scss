@@ -241,9 +241,9 @@ dd>a {
 }
 
 
-// .img-overlay{
-//     overflow: hidden;
-// }
+.img-overlay{
+    overflow: hidden;
+}
 .img-wrap {
     display: block;
     background-color: yellowgreen;
@@ -256,24 +256,23 @@ dd>a {
 
 .img-wrap img {
     vertical-align: top;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 .img-wrap img:hover {
-    transform: scale(1.2);
-
+    transform: scale(1.1);
 }
 
 .icon-new {
     position: absolute;
-    left: -25px;
-    bottom: -25px;
+    // left: -25px;
+    // bottom: -50px;
     width: 50px;
+    line-height: 50px;
     border-radius: 100%;
-    margin: left -25px;
+    margin-left:-25px;
     color: white;
     background-color: green;
-    line-height: 50px;
     ;
 }
 
