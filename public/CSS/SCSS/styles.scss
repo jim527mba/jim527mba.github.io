@@ -1,8 +1,26 @@
 $primary-color:white;
 
-* {
-    margin: 0;
-    padding: 0;
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+
+// input[type=radio]:checked {
+//     border: 10px solid red;
+//  }
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+}
+
+.clearfix {
+    *display: inline-block;
+    _height: 1%;
 }
 
 a,
@@ -101,7 +119,6 @@ header>.container1>nav>ul>li>a {
     color: #30292f;
     height: 60px;
     line-height: 60px;
-    // color: $primary-color;
     text-align: center;
 }
 
@@ -117,10 +134,13 @@ header>.container1>nav>ul>li>a {
 }
 
 .col-4 {
-    margin: 10px;
+    margin: 15px;
     width: calc(100%/3-30px);
-    // width: 33%;
+}
 
+.col-8 {
+    margin: 0px 15px 40px 15px;
+    width: calc(100%/1.5-30px);
 }
 
 .container2 h2 {
@@ -172,45 +192,39 @@ dd>a {
 // ex_list
 // ==============================
 
-// .container-ex {}
-
-section h4{
+.breadcrumb {
+    display: flex;
     margin: 20px;
+    width: 100%;
 }
 
-section h4 a{
+.breadcrumb li {
     color: #30292f;
-    height: 30px;
-    margin: 10px;
+    font-weight: bold;
 }
 
-.left {
+.w-20{
     width: 20%;
-    text-align: center;
-    float: left;
 }
 
-section ul{
-    width: 20%;
-    text-align: center;
+.w-80{
+    width: 80%;
 }
 
-section li {
-    color: white;
+.row li{
+    background-color: #458fb4;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 180px;
     height: 40px;
     line-height: 40px;
-    margin: 5px;
-    background-color: #30292f;
-    border-radius: 8px;
+    text-align: center;
 }
 
-section a {
+.row a{
     color: white;
 }
 
-// .right {
-//     color: #30292f;
-//     display: block;
-//     width: 70%;
-//     float: left;
-// }
+
+
