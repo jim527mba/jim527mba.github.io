@@ -7,11 +7,6 @@
   height: 0;
 }
 
-.clearfix {
-  *display: inline-block;
-  _height: 1%;
-}
-
 a,
 p {
   text-decoration: none;
@@ -27,14 +22,13 @@ body {
   text-align: center;
 }
 
-.container1 {
+.container {
   margin: auto;
   width: 100%;
-  max-width: 1920px;
   background-color: #5d737e;
 }
 
-header > .container1 > h1 {
+header > .container > h1 {
   color: white;
   margin-left: 15px;
   height: 100px;
@@ -55,10 +49,9 @@ header > .container1 > h1 {
   transform: scale(1.2, 1.2);
 }
 
-.container2 {
+.container_white {
   margin: auto;
-  width: 100%;
-  max-width: 1920px;
+  width: 1140px;
   background-color: white;
 }
 
@@ -71,24 +64,24 @@ ol {
   list-style: none;
 }
 
-header > .container1 > nav > ul {
+header > .container > nav > ul {
   display: flex;
   justify-content: space-around;
   padding: 0px;
   height: 30px;
 }
 
-header > .container1 > nav > ul > li {
+header > .container > nav > ul > li {
   width: 25%;
   text-align: center;
   background-color: #5d737e;
 }
 
-header > .container1 > nav > ul > li:hover {
+header > .container > nav > ul > li:hover {
   background-color: #30292f;
 }
 
-header > .container1 > nav > ul > li > a {
+header > .container > nav > ul > li > a {
   line-height: 30px;
   color: white;
   font-weight: 700;
@@ -96,7 +89,7 @@ header > .container1 > nav > ul > li > a {
   display: block;
 }
 
-.container2 > h2 {
+.container_white > h2 {
   color: #30292f;
   height: 60px;
   line-height: 60px;
@@ -104,9 +97,8 @@ header > .container1 > nav > ul > li > a {
 }
 
 .img-rounded {
-  width: 300px;
+  width: 100%;
   border-radius: 5px;
-  margin: auto;
 }
 
 .row {
@@ -115,27 +107,27 @@ header > .container1 > nav > ul > li > a {
 }
 
 .col-4 {
-  margin: 15px;
-  width: calc(100%/3-30px);
+  width: calc(100% / 3 - 15px);
+  margin: 5px;
 }
 
 .col-8 {
-  margin: 0px 15px 40px 15px;
-  width: calc(100%/1.5-30px);
+  width: calc(100% / 1.5 - 30px);
+  margin: 15px 15px 15px 15px;
 }
 
-.container2 h2 {
+.container_white h2 {
   height: 60px;
 }
 
-.container2 h2,
+.container_white h2,
 p,
 a {
   color: #30292f;
   text-align: center;
 }
 
-.container3 {
+.style_footer {
   background-color: #5d737e;
   margin-top: 30px;
 }
@@ -186,8 +178,7 @@ dd > a {
   background-color: #458fb4;
   border: 1px solid white;
   border-radius: 8px;
-  font-size: 20px;
-  width: 180px;
+  width: 70%;
   height: 40px;
   line-height: 40px;
   text-align: center;
