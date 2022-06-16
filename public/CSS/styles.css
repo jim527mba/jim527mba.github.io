@@ -37,11 +37,12 @@ header > .container > h1 {
 
 .pic {
   width: 100%;
+  overflow: hidden;
 }
 
 .pic img {
   transform: scale(1, 1);
-  transition: all 0.8s ease-out;
+  transition: all 1s ease-out;
 }
 
 .pic img:hover {
@@ -174,7 +175,7 @@ dd > a {
 }
 
 .row li {
-  background-color: #458fb4;
+  background-color: #30292f;
   border: 1px solid white;
   border-radius: 8px;
   width: 70%;
