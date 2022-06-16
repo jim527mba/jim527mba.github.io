@@ -222,11 +222,13 @@ dd > a {
 }
 
 .icon-new {
-  position: absolute;
-  width: 50px;
   line-height: 50px;
+  width: 50px;
   border-radius: 100%;
   margin-left: -25px;
+  position: absolute;
+  left: 25px;
+  top: 0px;
   color: white;
   background-color: green;
 }
