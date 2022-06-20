@@ -29,7 +29,8 @@ body {
 }
 
 .container_white {
-  margin: auto;
+  margin: 0 auto;
+  width: 100%;
   background-color: white;
 }
 
@@ -78,9 +79,6 @@ header > .container {
   position: relative;
 }
 
-/* header > .container > .icon-menu{
-    position: fixed;
-  } */
 header > .container > h1 {
   color: white;
   margin-left: 15px;
@@ -88,18 +86,6 @@ header > .container > h1 {
   line-height: 60px;
 }
 
-/* nav {
-    height: 50px;
-
-  } */
-/* header nav{
-    width: 100%;
-    float:left
-  } */
-/* header nav ul{
-    width: 100%;
-    display: block;
-  } */
 /* ============================================
   header的選單
   ============================================ */
@@ -156,21 +142,46 @@ a {
   flex-wrap: wrap;
 }
 
+.col-3 {
+  width: calc(100% / 4 - 15px);
+  margin: 5px;
+}
+
 .col-4 {
-  width: calc(100% / 3 - 15px);
+  width: calc(100% / 3 - 10px);
+  margin: 5px;
+}
+
+.col-61 {
+  width: calc(100% / 2 - 10px);
+  margin: 5px;
+}
+
+.col-81 {
+  width: calc(100% / 1.5 - 10px);
   margin: 5px;
 }
 
 @media (max-width: 800px) {
   .col-8 {
     width: calc(100% / 2 - 30px);
+    margin: auto;
+  }
+
+  .col-3 {
+    width: calc(100% / 1);
     margin: 15px 15px 15px 15px;
   }
 }
 @media (max-width: 400px) {
   .col-12 {
     width: calc(100% / 1 - 30px);
-    margin: 15px 15px 15px 15px;
+    margin: 0;
+  }
+
+  .col-3 {
+    width: calc(100% / 1);
+    margin: 0;
   }
 }
 /* .w-20 {
@@ -286,6 +297,10 @@ dd > a {
   font-weight: bold;
 }
 
+.flex-space-between {
+  justify-content: space-between;
+}
+
 /* ============================================
   手機版
   ============================================ */
@@ -297,25 +312,60 @@ dd > a {
     display: none;
   }
 }
-.icon-menu {
-  float: right;
-  width: 40px;
-  margin-top: 10px;
-  margin-right: 5px;
-  height: 40px;
-}
-
 @media (max-width: 767px) {
-  header > .container > nav {
-    display: none;
-    width: 100%;
-    float: left;
+  h1 {
+    width: 85%;
   }
 
-  header > .container > img.active {
+  .icon-menu {
+    width: 15%;
+    display: block;
+    background-color: orange;
+    color: black;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  header {
+    position: relative;
+  }
+
+  header > .container nav {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    background-color: #5d737e;
+  }
+
+  nav {
+    left: 0px;
+    left: -100vw;
+    transition: all 0.3s;
+  }
+
+  .icon-menu:hover + nav {
+    left: 0px;
+    height: 244px;
+  }
+
+  header > .container nav.active {
     display: block;
   }
+
+  header > .container nav > ul {
+    display: block;
+  }
+
+  header > .container nav > ul > li {
+    text-align: center;
+    width: 60%;
+  }
+
+  header > .container nav > ul > li > a {
+    display: block;
+  }
+
+  .submenu {
+    background-color: white;
+  }
 }
-/* ============================================
-  自適應網頁index改版
-  ============================================ */
