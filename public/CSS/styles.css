@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .clearfix:after {
   content: "";
   display: block;
@@ -7,6 +8,9 @@
   height: 0;
 }
 
+/* ============================================
+  共用參數
+  ============================================ */
 a,
 p {
   text-decoration: none;
@@ -18,23 +22,34 @@ body {
   margin: 0;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .container {
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
   background-color: #5d737e;
 }
 
-header > .container > h1 {
-  color: white;
-  margin-left: 15px;
-  height: 100px;
-  line-height: 60px;
+.container_white {
+  margin: auto;
+  width: 1140px;
+  background-color: white;
 }
 
+.text-center {
+  text-align: center;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* ============================================
+  圖片參數
+  ============================================ */
 .pic {
   width: 100%;
   overflow: hidden;
@@ -49,25 +64,51 @@ header > .container > h1 {
   transform: scale(1.2, 1.2);
 }
 
-.container_white {
-  margin: auto;
-  width: 1140px;
-  background-color: white;
+.img-rounded {
+  width: 100%;
+  border-radius: 5px;
 }
 
-nav {
-  height: 50px;
+/* ============================================
+  HEADER
+  ============================================ */
+/* ============================================
+  HEADER
+  ============================================ */
+header > .container {
+  position: relative;
 }
 
-ul,
-ol {
-  list-style: none;
+/* header > .container > .icon-menu{
+    position: fixed;
+  } */
+header > .container > h1 {
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 0px;
+  line-height: 60px;
 }
 
+/* nav {
+    height: 50px;
+
+  } */
+/* header nav{
+    width: 100%;
+    float:left
+  } */
+/* header nav ul{
+    width: 100%;
+    display: block;
+  } */
+/* ============================================
+  header的選單
+  ============================================ */
 header > .container > nav > ul {
   display: flex;
   justify-content: space-around;
   padding: 0px;
+  margin: 0%;
   height: 30px;
 }
 
@@ -89,18 +130,28 @@ header > .container > nav > ul > li > a {
   display: block;
 }
 
-.container_white > h2 {
+/* ============================================
+  container
+  ============================================ */
+.container_white h2,
+p,
+a {
   color: #30292f;
-  height: 60px;
-  line-height: 60px;
   text-align: center;
 }
 
-.img-rounded {
+.container_white > h2 {
+  color: #30292f;
+  height: 60px;
   width: 100%;
-  border-radius: 5px;
+  text-align: left;
+  margin: 0 0 0 15px;
+  line-height: 60px;
 }
 
+/* ============================================
+  主內容的圖片展示
+  ============================================ */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -116,68 +167,13 @@ header > .container > nav > ul > li > a {
   margin: 15px 15px 15px 15px;
 }
 
-.container_white h2 {
-  height: 60px;
-}
+/* .w-20 {
+    width: 20%;
+  }
 
-.container_white h2,
-p,
-a {
-  color: #30292f;
-  text-align: center;
-}
-
-.style_footer {
-  background-color: #5d737e;
-  margin: 0 0 0 0;
-}
-
-.style_footer dt {
-  margin-left: 15px;
-}
-
-dt {
-  font-size: 1em;
-  color: wheat;
-  margin-top: 20px;
-  margin-right: 100px;
-}
-
-dd {
-  margin-bottom: 5px;
-}
-
-dd > a {
-  color: white;
-}
-
-.copyright {
-  margin-top: 50px;
-  color: yellow;
-  font-style: italic;
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.breadcrumb {
-  display: flex;
-  margin: 20px;
-  width: 100%;
-}
-
-.breadcrumb li {
-  color: #30292f;
-  font-weight: bold;
-}
-
-.w-20 {
-  width: 20%;
-}
-
-.w-80 {
-  width: 80%;
-}
-
+  .w-80 {
+    width: 80%;
+  } */
 .row li {
   background-color: #30292f;
   border: 1px solid white;
@@ -232,3 +228,88 @@ dd > a {
   color: white;
   background-color: green;
 }
+
+/* ============================================
+  FOOTER的圖片展示
+  ============================================ */
+/* ============================================
+  FOOTER的圖片展示
+  ============================================ */
+/* .style_footer {
+    background-color: #5d737e;
+    margin: 0 0 0 0;
+  }
+
+  .style_footer dt {
+    margin-left: 15px;
+  } */
+dt {
+  font-size: 1em;
+  color: wheat;
+  margin-top: 20px;
+  margin-right: 100px;
+}
+
+dd {
+  margin-bottom: 5px;
+}
+
+dd > a {
+  color: white;
+}
+
+.copyright {
+  margin-top: 50px;
+  color: yellow;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+/* ============================================
+  其他元素設定
+  ============================================ */
+.breadcrumb {
+  display: flex;
+  margin: 20px;
+  width: 100%;
+}
+
+.breadcrumb li {
+  color: #30292f;
+  font-weight: bold;
+}
+
+/* ============================================
+  手機版
+  ============================================ */
+/* ============================================
+  手機版
+  ============================================ */
+@media (min-width: 768px) {
+  .icon-menu {
+    display: none;
+  }
+}
+.icon-menu {
+  float: right;
+  width: 40px;
+  margin-top: 10px;
+  margin-right: 5px;
+  height: 40px;
+}
+
+@media (max-width: 767px) {
+  header > .container > nav {
+    display: none;
+    width: 100%;
+    float: left;
+  }
+
+  header > .container > img.active {
+    display: block;
+  }
+}
+/* ============================================
+  手機版
+  ============================================ */
