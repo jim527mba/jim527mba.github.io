@@ -17,6 +17,10 @@ p {
   color: white;
 }
 
+ul, li {
+  list-style-type: none;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -319,3 +323,6 @@ dd > a {
 /* ============================================
   自適應網頁index改版
   ============================================ */
+header > .container > img > a {
+  display: block;
+}
