@@ -1,6 +1,226 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    ;
 }
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none
+}
+
+// 內容參數
+
+header {
+    width: 100%;
+    // float: left;
+    // position: relative;
+    // position: fixed;
+    display: flex;
+    flex-direction: row;
+    background-image: url("/public/images/img-bgc-header.jpg");
+    background-position: center;
+}
+
+.logo {
+    width: 50%;
+    padding: 10px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+nav {
+    // color:white;
+    width: 120px;
+    height: 57px;
+    float: right;
+    position: absolute;
+    right: 5px;
+    margin: 0;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.contact {
+    color: white;
+    width: 100px;
+    // right: 10px;
+    margin: 5px 8px 0px 0px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contact>a {
+    color: white;
+    display: block;
+    width: 100px;
+    font-size: large;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+@media (max-width:450px) {
+    .contact a {
+        font-size: 14px;
+    }
+
+    .menu-mobile {
+        display: block;
+        color: white;
+        width: 100px;
+        // right: 10px;
+        margin: 5px 8px 0px 0px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .menu-mobile>p {
+        font-size: 14px;
+        border: 2px solid white;
+        border-radius: 8px;
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .menu-mobile ul li {
+        color: black;
+        font-size: 14px;
+        background-color: #f4d35e;
+        display: block;
+        width: 100%;
+        border: 1px solid white;
+        border-radius: 6px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .menu-mobile>ul>li>a {
+        display: block;
+        // font-size: large;
+        font-weight: bold;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .menu-mobile ul {
+        display: none;
+    }
+
+    .menu-mobile ul.active {
+        display: block;
+    }
+}
+
+//for mobile end
+
+
+
+.banner {
+    width: 100%;
+    // padding: 10px;
+    flex-wrap: wrap;
+}
+
+.banner ul {
+    background-color: #f4d35e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.banner ul li {
+    // background-color: #ee964b;
+    display: block;
+    width: 19%;
+    // border: 1px solid white;
+    // border-radius: 6px;  
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
+    // border-top: 2px solid #24619a;
+
+}
+
+.banner ul li:hover {
+    background-color: #ee964b;
+    border-bottom: 2px solid #24619a;
+}
+
+.banner>ul>li>a {
+    display: block;
+    font-size: medium;
+    // font-weight: bold;
+}
+
+.banner>ul>li>a:hover {
+    font-weight: bolder;
+}
+
+// header 參數 end
+
+// footer 參數
+
+footer {
+    width: 100%;
+    // position: relative;
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    // flex-direction: column;
+    background-image: url("/public/images/img-bgc-header.jpg");
+    background-position: center;
+}
+
+footer>.logo{
+    width: 10%;
+}
+
+footer>.logo img{
+    width: 40px;
+    margin: auto;
+}
+
+footer>h5{
+    color: white;
+    width: 95%;
+    margin: auto;
+
+}
+
+// footer 參數 end
+
+.container{
+    background-color: beige;
+    width: 100%;
+    height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
