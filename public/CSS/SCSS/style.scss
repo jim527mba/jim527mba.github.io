@@ -13,30 +13,38 @@ a {
     text-decoration: none
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+// 測試參數
+
+
+
 // 內容參數
 
 header {
     width: 100%;
-    // float: left;
-    // position: relative;
-    // position: fixed;
     display: flex;
     flex-direction: row;
     background-image: url("/public/images/img-bgc-header.jpg");
     background-position: center;
 }
 
-.logo {
+header>.logo {
     width: 50%;
     padding: 10px;
 }
 
-.logo img {
+.logo>a>img {
     width: 100%;
+    height: 100%;
 }
 
 nav {
-    // color:white;
     width: 120px;
     height: 57px;
     float: right;
@@ -70,69 +78,6 @@ nav {
     display: none;
 }
 
-@media (max-width:450px) {
-    .contact a {
-        font-size: 14px;
-    }
-
-    .menu-mobile {
-        display: block;
-        color: white;
-        width: 100px;
-        // right: 10px;
-        margin: 5px 8px 0px 0px;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    .menu-mobile>p {
-        font-size: 14px;
-        border: 2px solid white;
-        border-radius: 8px;
-    }
-
-    .menu-mobile ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .menu-mobile ul li {
-        color: black;
-        font-size: 14px;
-        background-color: #f4d35e;
-        display: block;
-        width: 100%;
-        border: 1px solid white;
-        border-radius: 6px;
-        height: 25px;
-        line-height: 25px;
-        text-align: center;
-    }
-
-    .menu-mobile>ul>li>a {
-        display: block;
-        // font-size: large;
-        font-weight: bold;
-    }
-
-    .banner {
-        display: none;
-    }
-
-    .menu-mobile ul {
-        display: none;
-    }
-
-    .menu-mobile ul.active {
-        display: block;
-    }
-}
-
-//for mobile end
-
-
-
 .banner {
     width: 100%;
     // padding: 10px;
@@ -155,7 +100,8 @@ nav {
     height: 40px;
     line-height: 40px;
     text-align: center;
-
+    font-size: xx-large;
+    font-weight: bolder;
     // border-top: 2px solid #24619a;
 
 }
@@ -190,16 +136,15 @@ footer {
     background-position: center;
 }
 
-footer>.logo{
-    width: 10%;
+footer>.logo {
+    margin:5px 10px;
 }
 
-footer>.logo img{
+footer>.logo img {
     width: 40px;
-    margin: auto;
 }
 
-footer>h5{
+footer>h5 {
     color: white;
     width: 95%;
     margin: auto;
@@ -208,19 +153,147 @@ footer>h5{
 
 // footer 參數 end
 
-.container{
-    background-color: beige;
+.container {
+    position: relative;
     width: 100%;
-    height: 600px;
+    margin: 0px;
 }
 
+.row {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    background: url("/public/images/bg-img-100.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
+}
 
+.main-list {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.469);
+}
 
+.main-list>a {
+    width: 45%;
+}
 
+.main-list>div {
+    width: 50%;
+}
 
+// .main-list p {
+//     // height: 200px;
+//     // overflow: scroll;
+// }
 
+.main-list img {
+    width: 100%;
+    border-radius: 8px;
+    vertical-align: middle;
+    box-shadow: 5px 5px 0px 0px black inset;
+}
 
+.title-font-size {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
 
+.main-list h5 {
+    color: grey;
+    margin-bottom: 5px;
+}
 
+@media (max-width:500px) {
+    .contact a {
+        font-size: 14px;
+    }
 
+    .menu-mobile {
+        display: block;
+        color: white;
+        width: 100px;
+        margin: 5px 8px 0px 0px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .menu-mobile>p {
+        font-size: 14px;
+        border: 2px solid white;
+        border-radius: 8px;
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .menu-mobile ul li {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        border: 0.4px solid white;
+        border-radius: 0.8px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background-color: #faf0ca;
+        color: white;
+        margin-top: 3px;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.175);
+    }
+
+    .menu-mobile>ul>li>a {
+        color: #0d3b66;
+        display: block;
+        // font-size: large;
+        font-weight: bold;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .menu-mobile ul {
+        display: none;
+    }
+
+    .menu-mobile ul.active {
+        display: block;
+    }
+
+    .main-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        // justify-content: space-between;
+        // float: left;
+        margin: 10px;
+        // border: 2px solid grey;
+        // border-radius: 8px;
+        padding: 10px;
+    }
+
+    .main-list>a {
+        display: block;
+        width: 100%;
+    }
+
+    .main-list>div {
+        width: 100%;
+    }
+
+}
+
+//for mobile end

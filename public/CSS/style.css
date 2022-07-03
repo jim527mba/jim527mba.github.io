@@ -13,6 +13,11 @@ a {
   text-decoration: none;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -21,13 +26,14 @@ header {
   background-position: center;
 }
 
-.logo {
+header > .logo {
   width: 50%;
   padding: 10px;
 }
 
-.logo img {
+.logo > a > img {
   width: 100%;
+  height: 100%;
 }
 
 nav {
@@ -63,7 +69,118 @@ nav {
   display: none;
 }
 
-@media (max-width: 450px) {
+.banner {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.banner ul {
+  background-color: #f4d35e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.banner ul li {
+  display: block;
+  width: 19%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.banner ul li:hover {
+  background-color: #ee964b;
+  border-bottom: 2px solid #24619a;
+}
+
+.banner > ul > li > a {
+  display: block;
+  font-size: medium;
+}
+
+.banner > ul > li > a:hover {
+  font-weight: bolder;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-image: url("/public/images/img-bgc-header.jpg");
+  background-position: center;
+}
+
+footer > .logo {
+  margin: 5px 10px;
+}
+
+footer > .logo img {
+  width: 40px;
+}
+
+footer > h5 {
+  color: white;
+  width: 95%;
+  margin: auto;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0px;
+}
+
+.row {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  background: url("/public/images/bg-img-100.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.main-list {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.469);
+}
+
+.main-list > a {
+  width: 45%;
+}
+
+.main-list > div {
+  width: 50%;
+}
+
+.main-list img {
+  width: 100%;
+  border-radius: 8px;
+  vertical-align: middle;
+  box-shadow: 5px 5px 0px 0px black inset;
+}
+
+.title-font-size {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.main-list h5 {
+  color: grey;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 500px) {
   .contact a {
     font-size: 14px;
   }
@@ -90,19 +207,22 @@ nav {
   }
 
   .menu-mobile ul li {
-    color: black;
     font-size: 14px;
-    background-color: #f4d35e;
     display: block;
     width: 100%;
-    border: 1px solid white;
-    border-radius: 6px;
+    border: 0.4px solid white;
+    border-radius: 0.8px;
     height: 25px;
     line-height: 25px;
     text-align: center;
+    background-color: #faf0ca;
+    color: white;
+    margin-top: 3px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.175);
   }
 
   .menu-mobile > ul > li > a {
+    color: #0d3b66;
     display: block;
     font-weight: bold;
   }
@@ -118,66 +238,21 @@ nav {
   .menu-mobile ul.active {
     display: block;
   }
-}
-.banner {
-  width: 100%;
-  flex-wrap: wrap;
-}
 
-.banner ul {
-  background-color: #f4d35e;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  .main-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+  }
 
-.banner ul li {
-  display: block;
-  width: 19%;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-}
+  .main-list > a {
+    display: block;
+    width: 100%;
+  }
 
-.banner ul li:hover {
-  background-color: #ee964b;
-  border-bottom: 2px solid #24619a;
-}
-
-.banner > ul > li > a {
-  display: block;
-  font-size: medium;
-}
-
-.banner > ul > li > a:hover {
-  font-weight: bolder;
-}
-
-footer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  background-image: url("/public/images/img-bgc-header.jpg");
-  background-position: center;
-}
-
-footer > .logo {
-  width: 10%;
-}
-
-footer > .logo img {
-  width: 40px;
-  margin: auto;
-}
-
-footer > h5 {
-  color: white;
-  width: 95%;
-  margin: auto;
-}
-
-.container {
-  background-color: beige;
-  width: 100%;
-  height: 600px;
+  .main-list > div {
+    width: 100%;
+  }
 }
