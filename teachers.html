@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABOUT </title>
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="javascript:;">
+        <img src="public/images/img-logo-all.png" alt=""></a>
+    </div>
+    <nav>
+      <div class="contact">
+        <a href="javascript:;">聯繫我們</a>
+      </div>
+
+      <div class="menu-mobile">
+        <p id="menu-toggle">MENU</p>
+        <ul id="menu-mobile">
+          <li><a href="about.html">關於</a></li>
+          <li><a href="classes.html">課程</a></li>
+          <li><a href="teachers.html">師資</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">新聞</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <ul>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="classes.html">CLASSES</a></li>
+      <li><a href="teachers.html">TEACHERS</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="news.html">NEWS</a></li>
+    </ul>
+  </div>
+
+
+  <div class="container">
+    <div class="main-img">
+      <img src="/public/images/teacher/img-teacher-1.png" alt="">
+      <p id="teacher-description" style="font-weight:bold">
+        【Jim Huang】品育教育首席教育官CEO : NCTU科技管理博士、美國管理碩士，超過15年教學與管理經驗，成功輔導超過100位中小學生進入明星學校。
+      </p>
+    </div>
+    <div class="thumbnails">
+      <img class="active" src="/public/images/teacher/img-teacher-1.png" alt="【Jim Huang】品育教育首席教育官CEO : NCTU科技管理博士、美國管理碩士，超過15年教學與管理經驗，成功輔導超過100位中小學生進入明星學校。
+      ">
+      <img src="/public/images/teacher/img-teacher-2.png" alt="【Alice C.】資深數理經紀人：台灣大學數學系碩士、珠心算五段、圍棋三段，超過8年科研與顧問工作，專精數理教育、奧數、邏輯分析、科展論文...等。擅長輔導學生從0到1建立邏輯分析、獨立思考之能力，深受數理資優學生的肯定。">
+      <img src="/public/images/teacher/img-teacher-3.png" alt="【Gloria E.】資深外語經紀人:英國教育學碩士，超過10年教學與管理經驗，專精英語教育、歐美文化、修辭學、外文論文撰寫...等。擅長輔導全美、雙語、外籍學生，以及未來出國留學的優秀非歐美母語學生。">
+      <img src="/public/images/teacher/img-teacher-4.png" alt="【Victoria W.】高級文藝經紀人：法國藝術教育學碩士、國內知名插畫家、國標舞業餘選手，超過8年青少年教育經驗，專精美術、音樂、舞蹈教學與教育資源整合。擅長輔導藝文類學科的成果作品、塑造學生的質感與格調。">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    $('.thumbnails>img').on('click', function (e) {
+      $('.main-img>img').attr('src', $(this).attr('src'))
+    }) //.thumbnails>img end
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    $('.thumbnails>img').on('click', function (e) {
+      // 主圖src屬性(attribute) 替換成 當前點擊縮圖的src
+      $('.main-img>img').attr('src', $(this).attr('src'))
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+      $('#teacher-description').text($(this).attr('alt'))
+    }) // .thumbnails>img end
+
+  </script>
+
+  <footer>
+    <div class="logo">
+      <img src="/public/images/img-logo-w.png" alt="">
+    </div>
+    <h5>COPYRIGHT
+      <br>
+      <p>© 2017 - 2020 Jim Huang All Rights Reserved.</p>
+    </h5>
+  </footer>
+
+
+  <script>
+    let MenuM = document.getElementById('menu-mobile')
+    let MenuT = document.getElementById('menu-toggle')
+
+    MenuT.addEventListener('click', openUl)
+    console.log('點擊打開監控台')
+    function openUl() {
+      if (MenuM.classList.contains('active') == true) { MenuM.classList.remove('active') }
+      else {
+        MenuM.classList.add('active')
+      }
+    } 
+  </script>
+
+</body>
+
+</html>
