@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jim's test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="WOW-master/css/libs/animate.css">
+    <link rel="stylesheet" href="public/css/style.css">
+
+    <style>
+        .parent {
+            /* 可視範圍 */
+            width: 500px;
+            /* height: 500px; */
+            margin: auto;
+            /* 隱藏面板 */
+            overflow: hidden;
+            /* 相對定位 */
+            /* position: relative; */
+
+
+        }
+
+        .child {
+            width: 2000px;
+            /* 去除邊界 */
+            font-size: 0px;
+            /* 絕對定位 */
+            /* position: absolute; */
+            /* top: 0; */
+            /* left: 0; */
+            ;
+        }
+
+        .parent img {
+            width: 500px;
+        }
+
+        .left-arrow, .right-arrow{
+            position: absolute;
+            top: 0px;
+            display: flex;
+            width: 40px;
+            height: 500px;
+            /* line-height: 40px; */
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            background-color: lightblue;
+            cursor: pointer;
+        }
+
+        .left-arrow {
+            left: 0px;
+        }
+
+        .right-arrow {
+            right: 0px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    
+    <div class="parent">
+        <div class="child">
+            <img src="public/images/teacher/img-teacher-1.png" alt="teacher$">
+            <img src="public/images/teacher/img-teacher-2.png" alt="teacher$">
+            <img src="public/images/teacher/img-teacher-3.png" alt="teacher$">
+            <img src="public/images/teacher/img-teacher-4.png" alt="teacher$">
+            <div class="left-arrow">《</div>
+            <div class="right-arrow">》</div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+
+    <script>
+        // 設定目前的數字 
+        let currentLeftNum = 0
+        $('.right-arrow').on('click', function () {
+            // 選取 左邊的按鈕，在，點擊 觸發功能
+
+            // 先做一個判斷式
+            if (currentLeftNum == -1500) { }
+            else {
+                currentLeftNum = currentLeftNum - 500
+                $('.child').animate({ 'margin-left': currentLeftNum }
+                )
+                // 選取 子層，動畫，往左-500
+            }
+        })
+
+        $('.left-arrow').on('click', function () {
+            if (currentLeftNum == 0) { }
+            else {
+                currentLeftNum = currentLeftNum + 500
+                $('.child').animate({ 'margin-left': currentLeftNum })
+            }
+        })
+
+
+    </script>
+
+    <script src="js/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+
+</body>
+
+</html>
