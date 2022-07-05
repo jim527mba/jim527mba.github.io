@@ -11,8 +11,6 @@
       padding: 0px;
     }
 
-
-
     header {
       position: relative;
       display: block;
@@ -23,11 +21,15 @@
       text-align: center
     }
 
-    header>a>img {
+    header img {
       width: 100%;
       position: relative;
       /* text-align: center; */
       /* border: 2px solid black; */
+    }
+
+    header a {
+      display: block;
     }
 
     .nav {
@@ -36,14 +38,15 @@
       /* max-width: 1024px; */
       margin: auto;
       position: absolute;
-      top: 5%;
+      top: 2%;
       display: block;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
     }
 
-    .nav>img {
+    .nav>a {
       display: block;
       width: 60%;
-      max-width: 400px;
+      max-width: 600px;
       padding: 15px 0px;
       margin: auto;
     }
@@ -82,34 +85,34 @@
       color: white;
       /* font-size: xx-large; */
       font-weight: bold;
-      text-align: right;
+      text-align: left;
       position: absolute;
-      float: right;
-      right: 0;
+      float: left;
+      left: 5px;
       /* 水平位移 垂直位移 模糊 顏色 */
       text-shadow: 2px 2px 5px black;
     }
 
     .title-1 {
-      font-size: 50px;
+      font-size: 36px;
+      top: 20%;
+      margin-bottom: 10px;
+    }
+
+    .title-2 {
+      font-size: 36px;
       top: 30%;
 
     }
 
-    .title-2 {
-      font-size: 50px;
-      top: 35%;
-
-    }
-
     .title-3 {
-      font-size: 100px;
-      top: 45%;
+      font-size: 55px;
+      top: 40%;
       background-color: rgba(36, 97, 154, 0.61);
     }
 
 
-    @media (min-width:1200px) {
+    @media (min-width:1000px) {
       body {
         width: 100%;
         max-width: 1920px;
@@ -119,9 +122,9 @@
 
       .title-1 {
         /* color: black; */
-        font-size: 60px
-        ;
+        font-size: 60px;
         top: 20%;
+        margin-bottom: 10px;
 
       }
 
@@ -137,6 +140,7 @@
         background-color: #24619a;
         font-size: 100px;
         top: 30%;
+        padding: 5px;
       }
 
       .nav {
@@ -166,15 +170,16 @@
     <a href="about.html"><img src="public/images/index/index-img-1.jpg" alt=""></a>
     <div class="nav">
       <!-- <a href="javascript:;"> -->
-      <img src="/public/images/index/index-logo.png" alt=""></a>
+      <a href="about.html"><img src="/public/images/index/index-logo.png" alt=""></a>
+
     </div>
     <div class="title-1">
-      <p>引進韓式學生經紀人制度
-        高學歷專家一對一</p>
+      <p>韓式學生經紀人制度
+        專家一對一輔導</p>
     </div>
-    <div class="title-2">
+    <!-- <div class="title-2">
       <p>突破</p>
-    </div>
+    </div> -->
     <div class="title-3">
       <h3>多元入學</h3>
     </div>
@@ -191,7 +196,9 @@
         <p>© 2017 - 2020 Jim Huang All Rights Reserved.</p>
       </h5>
     </footer>
+
   </header>
+
 
   <script src="js/wow.min.js"></script>
   <script>
