@@ -5,10 +5,85 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>師資陣容</title>
+  <title>常見問題</title>
   <link rel="stylesheet" href="public/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    .question {
+      position: relative;
+      font-weight: bolder;
+    }
 
+    .question-content {
+      background-color: white;
+      border: 1px solid grey;
+      border-radius: 4px;
+      margin: 10px;
+      margin-bottom: 20px;
+      line-height: 20px;
+      padding: 10px 8px;
+      cursor: pointer;
+    }
+    
+    .answer {
+      display: none;
+    }
+
+    .question-content.active .answer {
+      display: block;
+      background-color: lightgoldenrodyellow;
+    }
+
+    .icon-arrow {
+      transition: .6s;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: rgb(222, 249, 242);
+      border: 1px solid rgb(153, 192, 246);
+      border-radius: 3px;
+      right: -5px;
+      top: -5px;
+      text-align: center;
+    }
+
+    .question-content.active .icon-arrow {
+      transform: rotate(180deg);
+    }
+
+    .section {
+      margin: 15px;
+    }
+
+    .bss {
+      background-color: aquamarine;
+      border: 2px solid grey;
+      margin-top: 20px;
+    }
+
+    .bbs>h4 {
+      margin-bottom: 5px;
+      ;
+    }
+
+    .bbs-contact,
+    .bbs-question {
+      color: rgba(128, 128, 128, 0.5);
+      background-color: hsla(48, 83%, 89%, 0.5);
+      width: 90%;
+      max-width: 500px;
+      border: 1px solid grey;
+      border-radius: 5px;
+      margin: 10px auto;
+      padding: 4px;
+    }
+
+    .bbs-contact {}
+
+    .bbs-question {
+      height: auto;
+    }
+  </style>
 </head>
 
 <body>
@@ -46,24 +121,95 @@
   </div>
 
 
+
   <div class="container">
-    <div class="main-img">
-      <img src="/public/images/teacher/img-teacher-1.png" alt="">
-      <p id="teacher-description" style="font-weight:bold">
-        【Jim Huang】品育教育首席教育官CEO : NCTU科技管理博士、美國管理碩士，超過15年教學與管理經驗，成功輔導超過100位中小學生進入明星學校。
-      </p>
+    <div class="section">
+      <H4>
+        有任何問題，請留下您的意見與聯繫方式，
+        <br>
+        我們會有專人主動接洽^^
+      </H4>
+      <div class="bbs">
+        <div class="bbs-contact">e-mail或手機號</div>
+
+        <div class="bbs-question">
+          問題或建議
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+
+      </div>
+
     </div>
-    <div class="thumbnails">
-      <img class="active" src="/public/images/teacher/img-teacher-1.png" alt="【Jim Huang】品育教育首席教育官CEO : NCTU科技管理博士、美國管理碩士，超過15年教學與管理經驗，成功輔導超過100位中小學生進入明星學校。
-      ">
-      <img src="/public/images/teacher/img-teacher-2.png"
-        alt="【Alice C.】資深數理經紀人：台灣大學數學系碩士、珠心算五段、圍棋三段，超過8年科研與顧問工作，專精數理教育、奧數、邏輯分析、科展論文...等。擅長輔導學生從0到1建立邏輯分析、獨立思考之能力，深受數理資優學生的肯定。">
-      <img src="/public/images/teacher/img-teacher-3.png"
-        alt="【Gloria E.】資深外語經紀人:英國教育學碩士，超過10年教學與管理經驗，專精英語教育、歐美文化、修辭學、外文論文撰寫...等。擅長輔導全美、雙語、外籍學生，以及未來出國留學的優秀非歐美母語學生。">
-      <img src="/public/images/teacher/img-teacher-4.png"
-        alt="【Victoria W.】高級文藝經紀人：法國藝術教育學碩士、國內知名插畫家、國標舞業餘選手，超過8年青少年教育經驗，專精美術、音樂、舞蹈教學與教育資源整合。擅長輔導藝文類學科的成果作品、塑造學生的質感與格調。">
+    <!-- .question-content*5>.question{q$$}>.icon-arrow^.answer{a$$} -->
+    <div class="question-content">
+      <div class="question">
+        Q1.什麼是“多元入學”？
+        <div class="icon-arrow"><i class="fa-solid fa-angles-down"></i></div>
+      </div>
+      <div class="answer">最佳解答：本方案依上述精神分為「大學繁星推薦入學」、「大學個人申請入學」及「大學考試入學」三大招生管道。
+        招生管道係延續繁星計畫「高中均質、區域均衡」之理念由高中向大學校系推薦符合資格的學生，提供各地區學生適性揚才之均等機會，並引導學生就近入學高中。 招生管道則兼具學生可依個人志趣選擇大學校系及大學校系依其特色適性選才之目的。
+      </div>
+    </div>
+
+    <div class="question-content">
+      <div class="question">
+        Q2.什麼是108課綱？
+        <div class="icon-arrow"><i class="fa-solid fa-angles-down"></i></div>
+      </div>
+      <div class="answer">最佳解答：「十二年國民基本教育課程綱要總綱」於103年11月發布，各領綱陸續發佈，並於108年8月正式上路，因此又稱為「108課綱」。
+        此次課綱是臺灣第一次將12年國民教育連貫發展，十年的籌備時間，經歷無數的專業對話，不斷精進，為臺灣的課程發展奠定良好的基礎。</div>
+    </div>
+
+    <div class="question-content">
+      <div class="question">
+        Q3.什麼是“升學經紀人”？
+        <div class="icon-arrow"><i class="fa-solid fa-angles-down"></i></div>
+      </div>
+      <div class="answer">最佳解答：韓國每家戶所得約有25～33％是花在補習費用上， 學生每週補8科，算客氣，11科很正常。 家長甚至請來「學業經紀人」，
+        替孩子安排補習課程，將孩子送上一流大學。學業經紀人替你找名師
+
+        對韓國父母來說，「教育費」算是不小的負擔。韓國的國民所得，在二○○五年時就超越台灣，目前約為兩萬美元。除物價、房價居高不下之外，根據韓國的研究指出，每家戶所得約有四分之一到三分之一是花在孩子的補習費用。
+
+        除了補習費，還有一項新興費用。在首爾市的漢江以南地區（稱為江南，類似台北的信義計畫區），出現一種專為父母打點孩子學習時程的「學業經紀人」。他的工作就是幫家長分析孩子在各科學習上的弱點，對居家附近的補習班、私人教師進行完全訪查，找到真正的「名師」所在之後，再為孩子安排每日的補習時間表。此工作光是牽線排課的服務費，就要五○～一五○萬韓幣（約台幣一～四萬元）。即使收費不貲，許多韓國家長還是對此服務趨之若鶩。
+      </div>
+    </div>
+
+    <div class="question-content">
+      <div class="question">
+        Q4.選擇我們的優勢是什麼？
+        <div class="icon-arrow"><i class="fa-solid fa-angles-down"></i></div>
+      </div>
+      <div class="answer">
+        最佳解答：就像生活中的一切一樣，這種類型的商人有一系列的好處，對他們所參與的交易有積極的貢獻，產生相關的貨幣收益，這將為他們和其他利益相關方帶來可持續的利潤，他們擁有當務之急是，談判合同中規定的一切都必須一字不差地履行，不得迴避合同中提到的內容。
+        因此，考慮到提到的每個細節，所有類型的經紀人的優勢如下：
+
+        首先是，他們是組織與其他公司開展業務時最好的促進者，簡化每項必要的交易，將他們需要的資源交到客戶手中，以協商他們想要的東西，成為高-水平的產品，如卓越的服務和世界聲譽，保持所要求的質量水平，以免失去您的客戶。
+        同樣，他們與客戶和其他利益相關方保持良好的溝通，以便他們能夠達成相互協議。
+
+
+        他的佣金通常是利益相關方從談判中獲得的總金額的 2,5%，但他的主要利潤是法律規定的客戶提供給他的，除了已經提到的百分比，保持財務流動性，以便每個人可以平等地獲勝，而始終不遺漏參與談判者的利益。
+        另一方面，它們具有穩定的邊際和勞動力盈利能力，這可以滋養任何收入大幅增加資本的公司。</div>
+    </div>
+
+    <div class="question-content">
+      <div class="question">
+        Q5.是否要選擇私校就讀？
+        <div class="icon-arrow"><i class="fa-solid fa-angles-down"></i></div>
+      </div>
+      <div class="answer">最佳解答：選擇私校或公校，代表不同的價值觀與取捨，各有利弊和必須付出的代價，也是家長最困難的掙扎。私校崛起和背後顯現的公校危機，能否帶動新一波公校改革，則是廣大家長心中最深切的期待。
+      </div>
     </div>
   </div>
+
+
 
 
 
@@ -106,6 +252,15 @@
       $(this).siblings().removeClass('active')
       $('#teacher-description').text($(this).attr('alt'))
     }) // .thumbnails>img end
+  </script>
+
+  <!-- QA切換 -->
+  <script>
+    $('.question-content').on('click', function () {
+      $(this).toggleClass('active') // 選取目標對象後，反復增加其效果（CSS自定）
+      $(this).siblings().removeClass('active') //選取目標對象後，其他子層移除效果
+      // $(this).find('.answer').stop().slideToggle()
+    }) //.question-content end
   </script>
 
 </body>
