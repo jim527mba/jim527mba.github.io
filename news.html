@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新活動消息</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .section {
+            width: 95%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photos {
+            font-size: 0;
+        }
+
+        .section img {
+            width: 500px;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 8%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .left-arrow {
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+        }
+
+        .right-arrow {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0px;
+        }
+
+        .indicator {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            position: absolute;
+            left: 50%;
+            top: 98%;
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        .indicator>li {
+            width: 10px;
+            height: 10px;
+            margin-top: 20px;
+            margin-left: -10px;
+            background-color: rgb(243, 229, 174);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .indicator>li:last-photos {
+            margin-right: 10px;
+        }
+
+        .indicator>li.active {
+            background-color: tomato;
+        }
+
+        .container h3 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #0d3b66b6;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .container h4 {
+            margin-left: 10px;
+            color: #0d3b66b6;
+        }
+
+        .activities{
+            background-color: green;
+            width: 100%;
+            height: 100px;
+            display: inline-block;
+            color: white;
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 5px;
+            justify-content: center;
+            text-align: center;
+            line-height: 100px;
+            box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.2) inset;
+        }
+
+        .activities a{
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="public/images/img-logo-all.png" alt=""></a>
+        </div>
+        <nav>
+            <div class="contact">
+                <a href="contact.html">登入|註冊</a>
+
+            </div>
+
+            <div class="menu-mobile">
+                <p id="menu-toggle" class="menu-style">MENU</p>
+                <ul id="menu-mobile">
+                    <li><a href="about.html">關於</a></li>
+                    <li><a href="classes.html">課程</a></li>
+                    <li><a href="teachers.html">師資</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="news.html">新聞</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="classes.html">CLASSES</a></li>
+            <li><a href="teachers.html">TEACHERS</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="news.html">NEWS</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="activities">
+            <a href="">
+                <img src="" alt="">最新消息在此</a>
+        </div>
+        <br>
+        <h3>最新活動近照</h3>
+        <div class="section">
+            <div class="photos">
+                <img src="public/images/news/row/news-1-1.jpg" alt="">
+                <img src="public/images/news/row/news-1-2.jpg" alt="">
+                <img src="public/images/news/row/news-1-3.jpg" alt="">
+                <img src="public/images/news/row/news-1-4.jpg" alt="">
+            </div>
+            <div class="left-arrow">《</div>
+            <div class="right-arrow">》</div>
+            <ol class="indicator">
+                <li class="active"></li>
+            </ol>
+        </div>
+        <h4>Dec 27th, 2021 優秀學生生活寫真</h4>
+        <br>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="/public/images/img-logo-w.png" alt="">
+        </div>
+        <h5>COPYRIGHT
+            <br>
+            <p>© 2017 - 2020 Jim Huang All Rights Reserved.</p>
+        </h5>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        let MenuM = document.getElementById('menu-mobile')
+        let MenuT = document.getElementById('menu-toggle')
+
+        MenuT.addEventListener('click', openUl)
+        console.log('點擊打開監控台')
+        function openUl() {
+            if (MenuM.classList.contains('active') == true) { MenuM.classList.remove('active') }
+            else {
+                MenuM.classList.add('active')
+            }
+        } 
+    </script>
+
+    <script>
+
+        // console.log('一開始執行',$('img').height())
+
+        $('.photos').prepend($('.photos>img').last().clone()) //第二層裡面最前面 補上 圖片陣列中的最後一個 的複製元素
+        $('.photos').append($('.photos>img').eq(1).clone()) //第二層裡面最後面 補上 圖片陣列中的第二個 的複製元素
+
+        let currentNum = 1 //當前的數字
+        let sectionWidth = $('.section').width() //父層寬度
+        let imgLength = $('.photos>img').length //子層圖片個數
+        let photosTotalWidth = sectionWidth * imgLength //父層寬度*子層圖片個數
+
+        $('.photos').css({ 'margin-left': -sectionWidth * currentNum }) //調整第二層一開始位移的位置
+        $('.photos').width(photosTotalWidth) //子層總寬 = 父層寬度*子層圖片個數(進到畫面讀一次)
+        $('.photos>img').width(sectionWidth) //子層下的圖片寬 = 父層寬度
+
+        // for 迴圈 從0到圖片總數-2 的條件下，i累加1
+        for (let i = 0; i < imgLength - 3; i++) {
+            $('.indicator>li.active').after('<li></li>')
+        }
+
+        // 縮放時的變化
+        $(window).resize(function () {
+            sectionWidth = $('.section').width()
+            photosTotalWidth = sectionWidth * imgLength
+            $('.photos').css({ 'margin-left': -sectionWidth * currentNum })
+            $('.photos').width(photosTotalWidth)
+            $('.photos>img').width(sectionWidth)
+        })//window resize end
+
+        $('.right-arrow').on('click', function () {
+            if (currentNum == imgLength - 1) { //假如當前的數字相等於圖片總數
+            } else {
+                // console.log(currentNum, imgLength)
+                currentNum = currentNum + 1 //當前數字累加1
+                common()
+                // $('.photos').animate({'margin-left': -sectionWidth * (currentNum - 1)})
+            }//if currentNum == imgLength end
+        })// .right-arrow end
+
+        $('.left-arrow').on('click', function () {
+            if (currentNum == 0) {
+            } else {
+                currentNum = currentNum - 1
+                common()
+                // $('.photos').animate({'margin-left': -sectionWidth * (currentNum - 1)})
+            }//if currentNum == 1 end
+
+        })// .left-arrow end
+
+        $('.indicator>li').on('click', function () {
+            // console.log( '當前的',currentNum )
+            // console.log( '跟現在點擊的',$(this).index() ) //序列號
+            // index() //序列號
+            // eq() //第幾個的元素
+            currentNum = $(this).index() + 1 // 當前的數字 = 點擊的序列號 + 1
+            common()
+            // $('.indicator>li').eq(currentNum - 1).addClass('active')
+            // $('.indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+        })//.indicator>li end
+
+        function common() {
+            // $('.photos').animate({'margin-left': -sectionWidth * currentNum},callback)
+            $('.photos').animate({ 'margin-left': -sectionWidth * currentNum }, 400, function () {
+                //==== callback 函式執行完之後執行=====
+                // 假如當前的數字 相等於 總數 - 1 
+                if (currentNum == imgLength - 1) {
+                    currentNum = 1
+                }
+                if (currentNum == 0) {
+                    currentNum = imgLength - 2
+                }
+                // 前面動畫跑完時執行
+                $('.photos').css({ 'margin-left': -sectionWidth * currentNum })
+                $('.indicator>li').eq(currentNum - 1).addClass('active')
+                $('.indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+
+            }) //callback end
+
+        } // common() end
+
+        setInterval(function () {
+            $('.right-arrow').click()
+        }, 5000)
+    </script>
+</body>
+
+</html>

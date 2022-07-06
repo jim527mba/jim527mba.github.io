@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常見問題</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        .container {
+            font-weight: bold;
+        }
+
+        .container h3 {
+            display: block;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .section-login {
+            background-color: hsla(209, 78%, 23%, 0.853);
+            border: 1px solid rgba(128, 128, 128, 0.682);
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            max-width: 800px;
+            margin: auto;
+            margin-top: 20px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            /* justify-content: center;
+            align-items: center; */
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        input {
+            display: block;
+            width: 80%;
+            /* color: white; */
+        }
+
+        .left { 
+            color: white;
+            width: 20%;
+            margin-right: 2%;
+            text-align: right;
+        }
+
+        .right {
+            color: white;
+            width: 75%;
+        }
+
+        .input-group {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width:2000px) {
+            input {
+                display: block;
+                width: 100%;
+            }
+
+            .left {
+                width: 100%;
+                text-align: left;
+                /* padding-left: 30px; */
+            }
+
+            .right {
+                width: 100%;
+            }
+
+            .input-group {
+                padding: 10px;
+            }
+
+        }
+
+        .btn-primary {
+            display: block;
+            /* align-items: center; */
+            width: 100px;
+            background-color: lightblue;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            font-weight: bold;
+
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            width: 50%;
+            align-items: center;
+            margin: auto;
+
+        }
+
+        form {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="javascript:;">
+                <img src="public/images/img-logo-all.png" alt=""></a>
+        </div>
+        <nav>
+            <div class="contact">
+                <a href="javascript:;">聯繫我們</a>
+            </div>
+
+            <div class="menu-mobile">
+                <p id="menu-toggle">MENU</p>
+                <ul id="menu-mobile">
+                    <li><a href="about.html">關於</a></li>
+                    <li><a href="classes.html">課程</a></li>
+                    <li><a href="teachers.html">師資</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="news.html">新聞</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="classes.html">CLASSES</a></li>
+            <li><a href="teachers.html">TEACHERS</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="news.html">NEWS</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <br>
+        <h3>
+            請輸入您的會員信息
+            <br>
+            或是註冊為新會員
+        </h3>
+        <div class="section-login">
+            <form action="dashboard.html" method="POST">
+                <div class="input-group">
+                    <div class="left">
+                        <label for="account">
+                            帳號
+                        </label>
+                    </div>
+                    <div class="right">
+                        <input type="text" id="account" name="account" placeholder="  e-mail / 手機號 / 身份證號">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="left">
+                        <label for="password">
+                            密碼
+                        </label>
+                    </div>
+                    <div class="right">
+                        <input type="password" id="password" name="password" placeholder="  8位數字 / 字符">
+                    </div>
+                </div>
+                <input type="submit" class="btn-primary" value="登入 | 註冊">
+            </form>
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="/public/images/img-logo-w.png" alt="">
+        </div>
+        <h5>COPYRIGHT
+            <br>
+            <p>© 2017 - 2020 Jim Huang All Rights Reserved.</p>
+        </h5>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- 手機版menu切換 -->
+    <script>
+        let MenuM = document.getElementById('menu-mobile')
+        let MenuT = document.getElementById('menu-toggle')
+
+        MenuT.addEventListener('click', openUl)
+        console.log('點擊打開監控台')
+        function openUl() {
+            if (MenuM.classList.contains('active') == true) { MenuM.classList.remove('active') }
+            else {
+                MenuM.classList.add('active')
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

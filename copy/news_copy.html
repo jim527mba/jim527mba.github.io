@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新消息</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        .section {
+            position: relative;
+            /* 可視範圍寬 */
+            width: 500px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .child {
+            /* 圖片寬度*項目個數 */
+            width: 2000px;
+            /* 去除行內空白，文字大小0 */
+            font-size: 0;
+        }
+
+        /* h1 {
+            font-size: 40px;
+        } */
+
+        .section img {
+            /* 同.section寬 */
+            width: 500px;
+        }
+
+        /* div時用float */
+        /* .son{
+            float: left;
+        } */
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            cursor: pointer;
+            /* background-color: rgba(255, 255, 255, 0.52); */
+            width: 40px;
+            height: 100%;
+            top: 0px;
+            /* 設定較小塊的感應區 */
+            /* height: 40px; */
+            /* top:50%; */
+            /* transform: translateY(-50%); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .left-arrow {
+            left: 0px;
+        }
+
+        .right-arrow {
+            right: 0px;
+        }
+
+        
+        .container h4{
+            background-color: rgba(255, 222, 137, 0.442);
+            display: block;
+            text-align: center;
+            margin: auto;
+            /* padding: 10px auto; */
+            line-height: 50px;
+            font-size: large;
+            /* height: 25%; */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="javascript:;">
+                <img src="public/images/img-logo-all.png" alt=""></a>
+        </div>
+        <nav>
+            <div class="contact">
+                <a href="contact.html">登入|註冊</a>
+            </div>
+
+            <div class="menu-mobile">
+                <p id="menu-toggle">MENU</p>
+                <ul id="menu-mobile">
+                    <li><a href="about.html">關於</a></li>
+                    <li><a href="classes.html">課程</a></li>
+                    <li><a href="teachers.html">師資</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="news.html">新聞</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <ul>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="classes.html">CLASSES</a></li>
+            <li><a href="teachers.html">TEACHERS</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="news.html">NEWS</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="section">
+            <h4>學員照片</h4>
+            <div class="child">
+                <img src="public/images/news/row/news-1-1.jpg" alt="">
+                <img src="public/images/news/row/news-1-2.jpg" alt="">
+                <img src="public/images/news/row/news-1-3.jpg" alt="">
+                <img src="public/images/news/row/news-1-5.jpg" alt="">
+            </div>
+            <div class="left-arrow">《《</div>
+            <div class="right-arrow">》》</div>
+            <span>123123
+            </span>
+            <br>
+        <br>
+        </div>
+
+        <div class="section">
+            <h4>才藝活動</h4>
+            <div class="child">
+                <img src="public/images/news/row/news-2-1.jpg" alt="">
+                <img src="public/images/news/row/news-2-2.jpg" alt="">
+                <img src="public/images/news/row/news-2-3.jpg" alt="">
+                <img src="public/images/news/row/news-2-4.jpg" alt="">
+            </div>
+            <div class="left-arrow">《《</div>
+            <div class="right-arrow">》》</div>
+            <span>123123
+            </span>
+            <br>
+        <br>
+        </div>
+
+        <div class="section">
+            <h4>學員照片</h4>
+            <div class="child">
+                <img src="public/images/news/column/news-3-1.jpg" alt="">
+                <img src="public/images/news/column/news-3-4.jpg" alt="">
+                <img src="public/images/news/column/news-4-1.jpg" alt="">
+                <img src="public/images/news/column/news-4-4.jpg" alt="">
+            </div>
+            <div class="left-arrow">《《</div>
+            <div class="right-arrow">》》</div>
+            <span>123123
+            </span>
+            <br>
+        <br>
+        </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="/public/images/img-logo-w.png" alt="">
+        </div>
+        <h5>COPYRIGHT
+            <br>
+            <p>© 2017 - 2020 Jim Huang All Rights Reserved.</p>
+        </h5>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- 手機版MENU切換 -->
+    <script>
+        let MenuM = document.getElementById('menu-mobile')
+        let MenuT = document.getElementById('menu-toggle')
+
+        MenuT.addEventListener('click', openUl)
+        console.log('點擊打開監控台')
+        function openUl() {
+            if (MenuM.classList.contains('active') == true) { MenuM.classList.remove('active') }
+            else {
+                MenuM.classList.add('active')
+            }
+        }
+    </script>
+
+    <!-- 圖片切換slide -->
+    <script>
+        let currentLeftNum = 0
+        $('.right-arrow').on('click', function () {
+            if (currentLeftNum == -1500) {
+            } else {
+                // 每點一次箭頭會扣500
+                currentLeftNum = currentLeftNum - 500
+                console.log(currentLeftNum)
+                // 第二層 動畫 left位移一張圖片寬
+                $('.child').animate({ 'margin-left': currentLeftNum })
+            }
+        })// .right-arrow end
+
+        $('.left-arrow').on('click', function () {
+            if (currentLeftNum == 0) {
+                // 假如 currentLeftNum == 0，執行這段
+            } else {
+                // 假如 currentLeftNum != 0，執行這段
+                // 每點一次箭頭會扣500
+                currentLeftNum = currentLeftNum + 500
+                // console.log(currentLeftNum)
+                // 第二層 動畫 left位移一張圖片寬
+                $('.child').animate({ 'margin-left': currentLeftNum })
+            }// if currentLeftNum end
+        })// .left-arrow end
+    </script>
+
+</body>
+
+</html>
