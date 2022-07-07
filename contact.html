@@ -26,25 +26,21 @@
             border-radius: 8px;
             display: flex;
             flex-wrap: wrap;
-            width: 60%;
+            width: 70%;
             max-width: 800px;
             margin: auto;
             margin-top: 20px;
             padding-top: 10px;
             padding-bottom: 20px;
-            /* justify-content: center;
-            align-items: center; */
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
         }
 
         input {
             display: block;
             width: 80%;
-            /* color: white; */
         }
 
-        .left { 
+        .left {
             color: white;
             width: 20%;
             margin-right: 2%;
@@ -63,7 +59,7 @@
             margin-bottom: 10px;
         }
 
-        @media (max-width:2000px) {
+        @media (max-width:1920px) {
             input {
                 display: block;
                 width: 100%;
@@ -72,7 +68,6 @@
             .left {
                 width: 100%;
                 text-align: left;
-                /* padding-left: 30px; */
             }
 
             .right {
@@ -82,12 +77,10 @@
             .input-group {
                 padding: 10px;
             }
-
         }
 
         .btn-primary {
             display: block;
-            /* align-items: center; */
             width: 100px;
             background-color: lightblue;
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -103,11 +96,45 @@
             width: 50%;
             align-items: center;
             margin: auto;
-
         }
 
         form {
             width: 100%;
+        }
+
+        .social-icon-group {
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .icon-fb,
+        .icon-google {
+            padding: 1%;
+            text-decoration: none;
+            border-radius: 4px;
+            width: 48%;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.469);
+        }
+
+        .icon-fb {
+            background: white;
+            color: black;
+        }
+
+        .icon-fb>i,
+        .icon-google>i {
+            margin-right: 8px;
+        }
+
+        .icon-google {
+            color: black;
+            background: white;
         }
     </style>
 </head>
@@ -122,7 +149,6 @@
             <div class="contact">
                 <a href="javascript:;">聯繫我們</a>
             </div>
-
             <div class="menu-mobile">
                 <p id="menu-toggle">MENU</p>
                 <ul id="menu-mobile">
@@ -178,7 +204,15 @@
                 <input type="submit" class="btn-primary" value="登入 | 註冊">
             </form>
             <br>
+
         </div>
+        <div class="social-icon-group">
+            <a class="icon-fb" href="javascript:;" target="_blank"><i class="fa-brands fa-facebook-f"></i>使用
+                facebook 登入</a>
+            <a class="icon-google" href="javascript:;" target="_blank"><i class="fa-brands fa-google"></i>使用 Google
+                登入</a>
+        </div>
+        <br>
         <br>
         <br>
         <br>
@@ -189,7 +223,7 @@
 
     <footer>
         <div class="logo">
-            <img src="/public/images/img-logo-w.png" alt="">
+            <img src="public/images/img-logo-w.png" alt="">
         </div>
         <h5>COPYRIGHT
             <br>
